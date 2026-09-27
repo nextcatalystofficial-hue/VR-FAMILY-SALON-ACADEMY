@@ -1,0 +1,6 @@
+{
+  "name": "VR Family Salon, Academy",
+  "description": "VR Family Salon, Academy in Pandra, Ranchi. Explore professional grooming, hairstyling and hair care services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

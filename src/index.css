@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-gold: #C8A96B;
+  --color-gold-light: #DFCA9B;
+  --color-gold-dark: #A68748;
+  --color-surface: #181818;
+  --color-bg-subtle: #111111;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #0A0A0A;
+    color: #F5F3EF;
+    overflow-x: hidden;
+  }
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Luxury hairline borders */
+.border-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.border-gold-subtle {
+  border-color: rgba(200, 169, 107, 0.25);
+}
+
+/* Subtle dot-matrix / grain overlay */
+.bg-subtle-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Hide scrollbar for gallery horizontal tabs if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
