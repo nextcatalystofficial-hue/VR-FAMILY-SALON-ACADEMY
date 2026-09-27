@@ -43,7 +43,7 @@ export default function CustomCursor() {
     <>
       {/* Small dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-[#C8A96B] pointer-events-none z-50 mix-blend-difference"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-[#B88E38] pointer-events-none z-50"
         animate={{
           x: mousePosition.x - 4,
           y: mousePosition.y - 4,
@@ -53,14 +53,14 @@ export default function CustomCursor() {
       />
       {/* Outer subtle ring */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full border border-[#C8A96B]/60 pointer-events-none z-50"
+        className="fixed top-0 left-0 rounded-full border border-[#B88E38]/70 pointer-events-none z-50 shadow-[0_0_10px_rgba(184,142,56,0.3)]"
         animate={{
           x: mousePosition.x - (isHoveringClickable ? 22 : 14),
           y: mousePosition.y - (isHoveringClickable ? 22 : 14),
           width: isHoveringClickable ? 44 : 28,
           height: isHoveringClickable ? 44 : 28,
-          backgroundColor: isHoveringClickable ? 'rgba(200, 169, 107, 0.15)' : 'transparent',
-          borderColor: isHoveringClickable ? '#C8A96B' : 'rgba(200, 169, 107, 0.4)',
+          backgroundColor: isHoveringClickable ? 'rgba(184, 142, 56, 0.12)' : 'transparent',
+          borderColor: isHoveringClickable ? '#B88E38' : 'rgba(184, 142, 56, 0.5)',
         }}
         transition={{ type: 'spring', damping: 25, stiffness: 250, mass: 0.2 }}
       />

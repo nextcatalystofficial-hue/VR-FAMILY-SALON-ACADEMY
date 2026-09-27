@@ -13,25 +13,26 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#0A0A0A]">
-      {/* Background Image with Slow Subtle Ambient Zoom */}
+    <section className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#FAFAF7]">
+      {/* Background Image with Luminous White & Gold Warm Editorial Scrim */}
       <div className="absolute inset-0 z-0">
         <motion.img
           src={salonAssets.hero}
           alt="VR Family Salon Luxury Grooming Interior"
           referrerPolicy="no-referrer"
           initial={{ scale: 1.06, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          animate={{ scale: 1, opacity: 0.35 }}
           transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center filter saturate-75"
         />
-        {/* Cinematic Scrims for Perfect Text Legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/75 to-[#0A0A0A]/35" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/90 via-[#0A0A0A]/50 to-transparent" />
+        {/* Luminous Warm White & Gold Ambient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FAFAF7] via-[#FAFAF7]/85 to-[#FAFAF7]/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FAFAF7] via-[#FAFAF7]/90 to-transparent" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
       </div>
 
       {/* Subtle Grain Overlay */}
-      <div className="absolute inset-0 bg-subtle-pattern pointer-events-none opacity-40 z-1" />
+      <div className="absolute inset-0 bg-subtle-pattern pointer-events-none opacity-60 z-1" />
 
       {/* Empty spacer for navbar clearance */}
       <div className="h-24 sm:h-32" />
@@ -46,8 +47,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex items-center gap-3 mb-4"
           >
-            <span className="w-8 h-[1px] bg-[#C8A96B]" />
-            <span className="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#C8A96B] font-medium">
+            <span className="w-8 h-[2px] bg-[#B88E38]" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#9E7422] font-semibold">
               Pandra · Ranchi · Jharkhand
             </span>
           </motion.div>
@@ -57,10 +58,12 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="font-editorial text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-[#F5F3EF] leading-[1.05] uppercase font-normal mb-6 text-balance"
+            className="font-editorial text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-[#141312] leading-[1.05] uppercase font-normal mb-6 text-balance"
           >
             Crafting <br />
-            <span className="italic font-light text-white">Your Signature</span> <br />
+            <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-[#B88E38] via-[#D4AF37] to-[#A88238]">
+              Your Signature
+            </span> <br />
             Look.
           </motion.h1>
 
@@ -69,7 +72,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="text-base sm:text-lg text-[#A6A6A6] font-light max-w-xl leading-relaxed mb-8"
+            className="text-base sm:text-lg text-[#4A4641] font-normal max-w-xl leading-relaxed mb-8"
           >
             Professional grooming, tailored styling, and expert hair care rituals at CCL Colony,
             Pandra. Experience meticulous barbering craftsmanship designed around your personal style.
@@ -84,24 +87,24 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           >
             <button
               onClick={onOpenBooking}
-              className="px-8 py-4 bg-[#C8A96B] text-[#0A0A0A] font-semibold text-xs tracking-[0.2em] uppercase hover:bg-[#D7BC82] transition-all duration-200 cursor-pointer shadow-lg shadow-black/40 flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-[#C59B43] via-[#D8B55A] to-[#B88E38] text-[#17140E] font-semibold text-xs tracking-[0.2em] uppercase hover:brightness-105 transition-all duration-200 cursor-pointer shadow-lg shadow-[#C59B43]/25 border border-[#C59B43]/30 flex items-center justify-center gap-2"
             >
               <span>Book Appointment</span>
             </button>
 
             <button
               onClick={handleScrollToServices}
-              className="px-8 py-4 bg-transparent border border-white/20 text-[#F5F3EF] font-medium text-xs tracking-[0.2em] uppercase hover:border-[#C8A96B] hover:text-[#C8A96B] transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-white border border-[#B88E38]/60 text-[#141312] font-semibold text-xs tracking-[0.2em] uppercase hover:border-[#B88E38] hover:bg-[#FAF8F3] hover:text-[#9E7422] transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm"
             >
-              <Scissors className="w-3.5 h-3.5 text-[#C8A96B]" />
+              <Scissors className="w-3.5 h-3.5 text-[#B88E38]" />
               <span>Explore Services</span>
             </button>
 
             <a
               href={`tel:${salonInfo.phone}`}
-              className="px-6 py-4 sm:hidden bg-[#181818] border border-white/10 text-white font-medium text-xs tracking-[0.15em] uppercase hover:border-white/30 transition-colors flex items-center justify-center gap-2"
+              className="px-6 py-4 sm:hidden bg-white border border-[#C8A96B]/30 text-[#141312] font-semibold text-xs tracking-[0.15em] uppercase hover:border-[#B88E38] transition-colors flex items-center justify-center gap-2 shadow-sm"
             >
-              <Phone className="w-3.5 h-3.5 text-[#C8A96B]" />
+              <Phone className="w-3.5 h-3.5 text-[#B88E38]" />
               <span>Call: {salonInfo.phoneFormatted}</span>
             </a>
           </motion.div>
@@ -111,44 +114,44 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-[#A6A6A6]"
+            className="pt-6 border-t border-[#C8A96B]/25 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-[#5C564F]"
           >
             <div className="flex items-center gap-2">
-              <div className="flex text-[#C8A96B]">
+              <div className="flex text-[#B88E38]">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-[#C8A96B]" />
+                  <Star key={i} className="w-3.5 h-3.5 fill-[#B88E38]" />
                 ))}
               </div>
-              <span className="text-white font-semibold tabular-nums">5.0</span>
+              <span className="text-[#141312] font-bold tabular-nums">5.0</span>
               <span>Google Rating</span>
             </div>
-            <span className="hidden sm:inline text-white/20">·</span>
+            <span className="hidden sm:inline text-[#C8A96B]/40">·</span>
             <div>
-              <span className="text-white font-medium tabular-nums">19+</span> Verified Client Reviews
+              <span className="text-[#141312] font-semibold tabular-nums">19+</span> Verified Client Reviews
             </div>
-            <span className="hidden sm:inline text-white/20">·</span>
+            <span className="hidden sm:inline text-[#C8A96B]/40">·</span>
             <div>
-              <span className="text-white font-medium">8:00 AM – 8:00 PM</span> Daily
+              <span className="text-[#141312] font-semibold">8:00 AM – 8:00 PM</span> Daily
             </div>
           </motion.div>
         </div>
       </div>
 
       {/* Bottom Scroll Indicator */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 pt-4 w-full flex items-center justify-between border-t border-white/5">
-        <span className="text-[10px] tracking-[0.25em] text-[#A6A6A6] uppercase">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 pt-4 w-full flex items-center justify-between border-t border-[#C8A96B]/20">
+        <span className="text-[10px] tracking-[0.25em] text-[#78716C] uppercase font-medium">
           VR Family Salon, Academy · Ranchi
         </span>
         <button
           onClick={handleScrollToServices}
-          className="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#A6A6A6] hover:text-[#C8A96B] transition-colors cursor-pointer group"
+          className="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#78716C] hover:text-[#B88E38] transition-colors cursor-pointer group font-medium"
         >
           <span>Scroll to explore</span>
           <motion.span
             animate={{ y: [0, 4, 0] }}
             transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
           >
-            <ArrowDown className="w-3 h-3 text-[#C8A96B]" />
+            <ArrowDown className="w-3 h-3 text-[#B88E38]" />
           </motion.span>
         </button>
       </div>

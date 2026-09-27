@@ -33,7 +33,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-[#F5F3EF] relative selection:bg-[#C8A96B] selection:text-[#0A0A0A]">
+    <div className="min-h-screen bg-[#FAFAF7] text-[#1A1815] relative selection:bg-[#B88E38] selection:text-white">
       {/* Scroll Progress Bar at the top */}
       <ScrollProgress />
 
@@ -97,9 +97,9 @@ export default function App() {
         <a
           href={`tel:${salonInfo.phone}`}
           aria-label="Call VR Salon"
-          className="flex items-center gap-2 px-4 py-3 bg-[#C8A96B] text-[#0A0A0A] font-semibold text-xs tracking-wider uppercase shadow-xl hover:bg-[#D7BC82] transition-transform active:scale-95"
+          className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-[#C59B43] via-[#D8B55A] to-[#B88E38] text-[#17140E] font-semibold text-xs tracking-wider uppercase shadow-xl hover:brightness-105 transition-transform active:scale-95 border border-[#C59B43]/30"
         >
-          <Phone className="w-4 h-4 fill-current" />
+          <Phone className="w-4 h-4 fill-current text-[#17140E]" />
           <span>Call Salon</span>
         </a>
       </div>

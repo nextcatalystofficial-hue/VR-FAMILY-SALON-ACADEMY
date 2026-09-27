@@ -3,18 +3,19 @@
 @theme {
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-  --color-gold: #C8A96B;
-  --color-gold-light: #DFCA9B;
-  --color-gold-dark: #A68748;
-  --color-surface: #181818;
-  --color-bg-subtle: #111111;
+  --color-gold: #B88E38;
+  --color-gold-light: #D4AF37;
+  --color-gold-dark: #8F6B20;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #FAF8F2;
+  --color-bg-ivory: #F7F4EB;
 }
 
 @layer base {
   body {
     font-family: var(--font-sans);
-    background-color: #0A0A0A;
-    color: #F5F3EF;
+    background-color: #FAFAF7;
+    color: #1A1815;
     overflow-x: hidden;
   }
 }
@@ -23,19 +24,43 @@
   font-family: var(--font-serif);
 }
 
-/* Luxury hairline borders */
+/* Luxury hairline borders for Golden & White theme */
 .border-subtle {
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(200, 169, 107, 0.22);
 }
 
 .border-gold-subtle {
-  border-color: rgba(200, 169, 107, 0.25);
+  border-color: rgba(184, 142, 56, 0.35);
 }
 
-/* Subtle dot-matrix / grain overlay */
+/* Golden text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #A88238 0%, #D4AF37 50%, #9E7422 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Golden button gradient */
+.btn-gold {
+  background: linear-gradient(135deg, #C59B43 0%, #D8B55A 50%, #B88E38 100%);
+  color: #17140E;
+  box-shadow: 0 4px 18px -2px rgba(197, 155, 67, 0.35);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #D4AF37 0%, #E2C474 50%, #C59B43 100%);
+  box-shadow: 0 6px 24px -2px rgba(197, 155, 67, 0.45);
+}
+
+/* Subtle gold dot-matrix / grain overlay */
 .bg-subtle-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-image: radial-gradient(rgba(184, 142, 56, 0.08) 1px, transparent 0);
   background-size: 24px 24px;
+}
+
+/* Luxury card glow */
+.gold-card-shadow {
+  box-shadow: 0 10px 30px -5px rgba(184, 142, 56, 0.08), 0 2px 6px 0 rgba(0, 0, 0, 0.03);
 }
 
 /* Hide scrollbar for gallery horizontal tabs if needed */
@@ -46,4 +71,5 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 
